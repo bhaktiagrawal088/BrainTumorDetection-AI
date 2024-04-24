@@ -1,21 +1,7 @@
 import streamlit as st
 import tensorflow as tf
 import numpy as np
-import cv2
-from PIL import Image, ImageOps
-
-st.set_option('deprecation.showfileUploaderEncoding', False)
-
-@st.cache(allow_output_mutation=True)
-def load_model():
-    model = tf.keras.models.load_model('/content/best_model.hdf5')
-    return model
-
-model = load_model()
-
-st.write("""
-        # Brain Tumor Detection
-        """)
+import cv2git
 
 file = st.file_uploader("Please upload a brain image", type=['jpg', 'png'])
 
