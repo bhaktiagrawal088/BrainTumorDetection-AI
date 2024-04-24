@@ -23,7 +23,7 @@ def import_and_predict(image_data, model):
   size = (180, 180)
   image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
   img = np.asarray(image)
-   prediction = model.predict(img_reshape)
+  prediction = model.predict(img_reshape)
 
   return prediction
     size = (180, 180)
