@@ -20,21 +20,12 @@ st.write("""
 file = st.file_uploader("Please upload a brain image", type=['jpg', 'png'])
 
 def import_and_predict(image_data, model):
-<<<<<<< HEAD
-  size = (180, 180)
-  image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
-  img = np.asarray(image)
-   prediction = model.predict(img_reshape)
-
-  return prediction
-=======
     size = (180, 180)
     image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
     img = np.asarray(image)
     img_reshape = img[np.newaxis,...]
     prediction = model.predict(img_reshape)
     return prediction
->>>>>>> 7cadf0c06044f140b75471ed9881a7e3d8288d49
 
 if file is None:
     st.text("Please upload an image file")
