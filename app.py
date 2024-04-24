@@ -20,7 +20,6 @@ st.write("""
 file = st.file_uploader("Please upload a brain image", type=['jpg', 'png'])
 
 def import_and_predict(image_data, model):
-<<<<<<< HEAD
   size = (180, 180)
   image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
   img = np.asarray(image)
